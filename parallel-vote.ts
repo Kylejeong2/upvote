@@ -8,7 +8,7 @@ import chalk from "chalk";
 import { main } from "./main.js";
 
 // Configuration
-const PARALLEL_INSTANCES = 10; // Number of parallel browser instances
+const PARALLEL_INSTANCES = 15; // Number of parallel browser instances
 const VOTES_PER_INSTANCE = 1; // Number of votes per instance
 
 /**
