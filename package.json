@@ -1,0 +1,27 @@
+{
+  "name": "upvote",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx index.ts",
+    "vote": "tsx vote.ts",
+    "cron": "tsx cron.ts",
+    "parallel": "tsx parallel-vote.ts",
+    "mass": "tsx mass-vote.ts",
+    "postinstall": "playwright install"
+  },
+  "dependencies": {
+    "@browserbasehq/sdk": "2.3.0",
+    "@browserbasehq/stagehand": "1.13.1",
+    "@playwright/test": "^1.49.1",
+    "boxen": "^8.0.1",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.7",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "tsx": "^4.19.2",
+    "typescript": "^5.0.0"
+  }
+}
