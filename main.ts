@@ -64,20 +64,6 @@ export async function main({
     
     // Wait to see confirmation
     await page.waitForTimeout(3000);
-    
-    // Check if vote was successful
-    try {
-      const { confirmation } = await page.extract({
-        instruction: "Extract any confirmation message that appears after voting",
-        schema: z.object({
-          confirmation: z.string(),
-        }),
-        useTextExtract: true,
-      });
-      console.log(chalk.green("Vote confirmation:"), confirmation);
-    } catch (error) {
-      console.log(chalk.yellow("Could not extract confirmation message, but vote may still have been successful"));
-    }
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : String(error);
     console.log(chalk.red("Error during automation:"), errorMessage);
